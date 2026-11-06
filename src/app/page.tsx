@@ -313,7 +313,7 @@ useEffect(() => {
 
 <section
   id="home"
-  className="relative min-h-[850px] h-screen flex items-center"
+  className="relative h-[1050px] md:min-h-[850px] md:h-screen flex items-start md:items-center overflow-hidden"
 >
 
   {/* SLIDER BACKGROUND */}
@@ -350,12 +350,12 @@ useEffect(() => {
 
   {/* HERO CONTENT */}
 
-  <div className="relative z-10 max-w-[1500px] mx-auto w-full px-6 md:px-12 pt-20">
+ <div className="relative z-10 max-w-[1500px] mx-auto w-full px-5 md:px-12 pt-36 pb-[400px] md:pt-20 md:pb-0">
 
     <div
-      key={activeSlide}
-      className="hero-content max-w-[750px] animate-[fadeIn_0.8s_ease-in-out]"
-    >
+  key={activeSlide}
+  className="hero-content max-w-[750px] min-h-[400px] md:min-h-[450px] flex flex-col justify-center animate-[fadeIn_0.8s_ease-in-out]"
+>
 
       <div className="flex items-center gap-3 mb-7">
 
@@ -367,8 +367,7 @@ useEffect(() => {
 
       </div>
 
-      <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[85px] leading-[1.08]">
-
+      <h1 className="font-serif text-[42px] sm:text-5xl md:text-7xl lg:text-[85px] leading-[1.08] min-h-[100px] md:min-h-[190px]">
         {slides[activeSlide].title1}
 
         <br />
@@ -379,7 +378,7 @@ useEffect(() => {
 
       </h1>
 
-      <p className="text-white/75 text-sm md:text-base leading-8 max-w-[520px] mt-7">
+      <p className="text-white/75 text-[13px] md:text-base leading-7 md:leading-8 max-w-[520px] mt-5 md:mt-7 min-h-[84px] md:min-h-[96px]">
 
         {slides[activeSlide].description}
 
@@ -387,7 +386,7 @@ useEffect(() => {
 
       {/* BUTTONS */}
 
-      <div className="flex flex-wrap gap-4 mt-9">
+      <div className="flex flex-wrap gap-3 md:gap-4 mt-7 md:mt-9">
 
         <Link
           href={slides[activeSlide].link1}
@@ -420,7 +419,7 @@ useEffect(() => {
       )
     }
     aria-label="Previous slide"
-    className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 w-11 h-11 md:w-14 md:h-14 rounded-full border border-white/40 bg-black/20 backdrop-blur-md flex items-center justify-center hover:bg-[#c5a15b] hover:text-[#071426] transition"
+    className="absolute left-3 md:left-8 top-[45%] md:top-1/2 -translate-y-1/2 z-30 w-9 h-9 md:w-14 md:h-14 rounded-full border border-white/40 bg-black/20 backdrop-blur-md flex items-center justify-center hover:bg-[#c5a15b] hover:text-[#071426] transition"
   >
     <ChevronLeft size={25} />
   </button>
